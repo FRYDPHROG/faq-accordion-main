@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --Work-Sans: 'Work Sans';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: var(--Light-pink);
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--Work-Sans);
+}
+
+.accordion{
+    background-color: var(--White);
+    width: 500px;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 10px;
+}
+
+.accordion-header{
+    display: flex;
+    gap: 20px;
+}
+
+h1{
+    font-weight: 800;
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p{
+    font-size: 16px;
+    color: var(--Dark-purple);
+}
+
+img{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+hr{
+    border: 1px solid var(--Light-pink);
+}
+
+
+@media (max-width: 600px){
+    body{
+        background-image: url(assets/images/background-pattern-mobile.svg);
+        background-size: 100%;
+    }
+
+    .accordion{
+        width:80%;
+        padding: 20px 25px;
+    }
+}
